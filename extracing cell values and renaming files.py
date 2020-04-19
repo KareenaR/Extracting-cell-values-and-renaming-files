@@ -1,12 +1,13 @@
 import os
 import xlrd
 
-
-path = "C:/Users/18575/Dropbox/Kareena/raw/2001 Census/08019 (Barcelona)/Viviendas/"
+#Specify the path of your folder
+path = "C:/Users/xxxx/xxxx"
 
 files = os.listdir(path)
 print(files)
 
+#I'm extracting the cell value B7 from Sheet 0 and assiging it to a new variable named 'final'
 for f in files:
     workbook = xlrd.open_workbook(path + f)
     worksheet = workbook.sheet_by_name('Sheet0')
